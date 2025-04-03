@@ -22,3 +22,16 @@ if uf_count == 2:
     print("용이 떠났소")
 else:
     print(f'용이 {under_feed}일 만큼 굶주렸소')
+####3
+import random
+answer = random.randint(a = 1, b =100)
+
+while(1):
+    q = int(input('비번 맞춰봐랑: '))
+    if q > answer:
+        print("너무 큰뎅?")
+    elif q < answer:
+        print("너무 작은뎅?")
+    else:
+        print("정답")
+        break
