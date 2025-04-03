@@ -1,0 +1,24 @@
+# M: 하루에 필요한 먹이량
+# N: 총 기간 (일수)
+M = int(input('용이 먹는 먹이양: '))
+N = int(input('용이 머무른 기간: '))
+
+# N일 동안 매일 준 먹이량을 입력받음
+under_feed = 0
+uf_count = 0
+for i in range(1, N+1):
+    feed = int(input(f'{i}일차 먹이 :'))
+    if feed < M:
+        under_feed+=1
+        uf_count += 1
+    else:
+        uf_count = 0
+
+    if uf_count == 2:
+        break
+
+
+if uf_count == 2:
+    print("용이 떠났소")
+else:
+    print(f'용이 {under_feed}일 만큼 굶주렸소')
