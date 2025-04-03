@@ -1,0 +1,19 @@
+# 하루 용돈 입력
+allowance = int(input("하루 용돈을 입력하세요: "))
+
+# 7일간 지출 금액 입력
+expenses = []
+print("7일간의 지출 금액을 입력하세요:")
+for i in range(7):
+    expense = int(input(f"{i+1}일차 지출: "))
+    expenses.append(expense)
+
+# 예산 초과한 날짜 수 계산
+over_budget_days = 0
+#이 배열 반복문으로 도는게 포인트
+for day_expense in expenses:
+    if day_expense > allowance:
+        over_budget_days += 1
+
+# 결과 출력
+print("예산을 초과한 날의 수:", over_budget_days)
