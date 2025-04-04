@@ -86,3 +86,26 @@ print(f"총 금액: {total}원")
 print(f"할인율: {int(discount_rate * 100)}%")
 print(f"할인 금액: {int(discount_amount)}원")
 print(f"최종 결제 금액: {int(final_amount)}원")
+
+#####6
+N = int(input("학생 수를 입력하세요"))
+
+
+#for문을 돌리면서 등급 출력 (한줄씩 출력해야하니까까)
+for i in range(1, N + 1):
+    score = int(input(f"{i}번 학생의 점수를 입력하세요: "))
+
+    if 90 <= score <= 100:
+        grade = 'A'
+    elif 80 <= score <= 89:
+        grade = 'B'
+    elif 70 <= score <= 79:
+        grade = 'C'
+    elif 60 <= score <= 69:
+        grade = 'D'
+    elif 0 <= score <= 59:
+        grade = 'F'
+    else:
+        grade = '유효하지 않은 점수'  # 점수가 0~100 범위를 벗어날 경우
+    
+    print(f"{i}번 학생의 성적 등급: {grade}")
