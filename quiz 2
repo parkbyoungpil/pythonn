@@ -145,3 +145,21 @@ while D > 0:
     sum+=1
 
 print(f"연료탱크는 {sum}번 채워야해")
+
+########9
+C = int(input("가방의 무게제한: "))
+N = int(input("아이템 갯수: "))
+
+G = 0      # 현재 총 무게
+count = 0  # 담은 아이템 개수
+
+#아이템 갯수 만큼만 돌려야해!!
+for i in range(N):
+    A = int(input(f"{i+1}번째 아이템 무게: "))
+    if G + A > C:
+        print("더 이상 못담아여")
+        break
+    G += A
+    count += 1
+
+print(f"담긴 물건은 {count}개, 총 무게는 {G}")
