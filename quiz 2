@@ -109,3 +109,28 @@ for i in range(1, N + 1):
         grade = '유효하지 않은 점수'  # 점수가 0~100 범위를 벗어날 경우
     
     print(f"{i}번 학생의 성적 등급: {grade}")
+
+########7
+while True:
+    password = input("비밀번호를 입력하세요: ")
+
+    is_valid = True
+
+    if len(password) < 8:
+        print("- 비밀번호는 8자 이상이어야 합니다.")
+        is_valid = False
+
+    if not any(c.isdigit() for c in password):
+        print("- 숫자(0~9)를 최소 하나 포함해야 합니다.")
+        is_valid = False
+
+    if not any(c.isalpha() for c in password):
+        print("- 영문자(A~Z 또는 a~z)를 최소 하나 포함해야 합니다.")
+        is_valid = False
+
+    if is_valid:
+        print(f"안전한 비밀번호가 설정되었습니다: {password}")
+        break
+
+    print()  # 줄바꿈
+
