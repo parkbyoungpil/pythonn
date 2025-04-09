@@ -163,3 +163,29 @@ for i in range(N):
     count += 1
 
 print(f"담긴 물건은 {count}개, 총 무게는 {G}")
+
+
+
+##########10
+
+import random
+
+N = int(input("풀 문제의 갯수를 입력하세요: "))
+correct = 0
+
+for i in range(1, N + 1):
+    #random으로 뽑기기
+    a = random.randint(2, 9)
+    b = random.randint(2, 9)
+    answer = a * b
+
+    user = int(input(f"{i}. {a} x {b} = "))
+
+    if user == answer:
+        print("정답입니다!\n")
+        correct += 1
+    else:
+        print(f"틀렸습니다. 정답은 {answer}입니다.\n")
+
+print(f"총 {N}문제 중 {correct}개를 맞혔습니다.")
+
