@@ -134,3 +134,14 @@ while True:
 
     print()  # 줄바꿈
 
+########8
+D = int(input("이동할 거리를 입력해주세요.: "))
+
+R = int(input("연료탱크가 가득 찰 시 달릴 수 있는 거리는: "))
+D = D-R
+sum = 0
+while D > 0:
+    D-=R
+    sum+=1
+
+print(f"연료탱크는 {sum}번 채워야해")
