@@ -253,4 +253,12 @@ for num in range(2, N + 1):
             break
     if is_prime:
         print(num, end=' ')
+
 ###########enumerate는 리스트에서 인덱스와 내용을 같이 가져옴  (인덱스, 내용) 순
+predicted = ['cat', 'dog', 'mouse']
+actual    = ['cat', 'dog', 'rat']
+
+for i, (p, a) in enumerate(zip(predicted, actual)):
+    if p != a:
+        print(f"Mismatch at index {i}: predicted={p}, actual={a}")
+
